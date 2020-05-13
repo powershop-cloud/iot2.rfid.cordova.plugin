@@ -36,7 +36,7 @@ public class IoTRFID extends CordovaPlugin {
             super.onInventoryTagEnd(tagEnd);
             if (mRTListener != null)
                 mRTListener.onReadTags(activosDiferentes);
-            activosDiferentes = new ArrayList<>();
+            activosDiferentes = new ArrayList<String>();
         }
     };
 
