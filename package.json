@@ -1,0 +1,17 @@
+{
+  "name": "iot2.rfid.cordova.plugin",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "iot2.rfid.cordova.plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "IoT",
+  "license": "ISC"
+}

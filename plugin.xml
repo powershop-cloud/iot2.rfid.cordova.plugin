@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="iot2.rfid.cordova.plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>IoTRFID</name>
+  <js-module name="IoTRFID" src="www/IoTRFID.js"><clobbers target="cordova.plugin.IoTRFID"/></js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="IoTRFID"><param name="android-package" value="iot2.rfid.cordova.plugin.IoTRFID"/></feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+    <source-file src="src/android/IoTRFID.java" target-dir="src/iot2/rfid/cordova/plugin"/>
+    <source-file src="src/android/ReadBarcodeListener.java" target-dir="src/iot2/rfid/cordova/plugin"/>
+    <source-file src="src/android/ReadTagListener.java" target-dir="src/iot2/rfid/cordova/plugin"/>
+    <lib-file src="libs/xdl2dRFID.jar" />
+    <lib-file src="libs/Serialport-module.jar" />
+    <resource-file  src="jniLibs/armeabi-v7a/libmodule_manager.so" target="jniLibs/armeabi-v7a/libmodule_manager.so"/>
+    <resource-file  src="jniLibs/armeabi-v7a/libserial_port.so" target="jniLibs/armeabi-v7a/libserial_port.so"/>
+  </platform>
+</plugin>
